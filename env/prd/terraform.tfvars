@@ -1,0 +1,16 @@
+region           = "us-east-1"
+environment      = "prod"
+project          = "stratos"
+eks_cluster_name = "eks"
+cidr_block       = "172.16.0.0/16"
+public_subnets   = { "us-east-1a" : "172.16.1.0/24", "us-east-1b" : "172.16.2.0/24", "us-east-1c" : "172.16.3.0/24" }
+private_subnets  = { "us-east-1a" : "172.16.4.0/24", "us-east-1b" : "172.16.5.0/24", "us-east-1c" : "172.16.6.0/24" }
+bastion_vm_type  = "t2.medium"
+bastion_image_id = "ami-0e05a510ffffd1e26"
+bastion_key_pair = "asg_key_pair"
+ec2_desire_size  = "1"
+ec2_max_size     = "3"
+ec2_min_size     = "1"
+eks_desired_size = "1"
+eks_max_size     = "5"
+eks_min_size     = "1"
